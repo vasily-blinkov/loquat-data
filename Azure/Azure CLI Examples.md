@@ -16,13 +16,21 @@ az webapp create --help
 
 Create a web app and set Git repository URL to link with manual integration.
 
-  ```pwsh
-  az webapp create `
-   --name "$WebAppName" `
-   --plan "$AppServicePlanName" `
-   --resource-group "$ResourceGroupName" `
-   --deployment-source-url "GitHubRepositoryURL"
-  ```
+```pwsh
+az webapp create `
+ --name "$WebAppName" `
+ --plan "$AppServicePlanName" `
+ --resource-group "$ResourceGroupName" `
+ --deployment-source-url "GitHubRepositoryURL"
+```
+
+### Delete a web app
+
+```pwsh
+az webapp delete `
+ --name $WebAppName `
+ --resource-group $ResourceGroupName
+```
   
 ### Manage deployment from Git or Mercurial repositories
 
