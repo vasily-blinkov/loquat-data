@@ -45,7 +45,7 @@ az webapp create `
  --name "$WebAppName" `
  --plan "$AppServicePlanName" `
  --resource-group "$ResourceGroupName" `
- --deployment-source-url "GitHubRepositoryURL"
+ --deployment-source-url "$GitHubRepositoryURL"
 ```
 
 ### Delete a web app
