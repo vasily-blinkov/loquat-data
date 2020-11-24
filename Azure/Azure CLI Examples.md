@@ -10,6 +10,30 @@ Show help message for a command to create a web app.
 az webapp create --help
 ```
 
+## Subscriptions
+
+### Test if the subscription specified by its I.D. does not exist
+
+```pwsh
+(az account list --query "[?id=='$SubscriptionID'].name" | ConvertFrom-Json | measure).Count -EQ 0
+```
+
+## App Service plans
+
+### Test if the specified by its name App Service plan does not exist
+
+```pwsh
+(az appservice plan list --query "[?name=='$AppServicePlanName'].id" | ConvertFrom-Json | measure).Count -EQ 0
+```
+
+## Resource groups and template deployments
+
+### Test if the resource group specified by name does not exits
+
+```pwsh
+(az group list --query "[?name=='$ResourceGroupName']" | ConvertFrom-Json | measure).Count -EQ 0
+```
+
 ## Web apps
 
 ### Create a web app
