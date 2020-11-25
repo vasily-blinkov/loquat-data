@@ -55,6 +55,15 @@ az webapp delete `
  --name $WebAppName `
  --resource-group $ResourceGroupName
 ```
+
+### Test if a web app exists
+
+```pwsh
+(az webapp list `
+ --query "[?name=='$WebAppName'].name"
+| ConvertFrom-Json
+| measure).Count -NE 0
+```
   
 ### Manage deployment from Git or Mercurial repositories
 
