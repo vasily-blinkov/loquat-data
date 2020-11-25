@@ -107,7 +107,11 @@ Let's suppose everyting described above passed and the site works. But what shou
 To change a `repoUrl` use the command below.
 
 ```bash
-az webapp deployment source config --subscription "$SubscriptionID" --name "$WebAppName" --resource-group "$ResourceGroupName" --repo-url "$NewRepoUrl"
+az webapp deployment source config `
+ --subscription "$SubscriptionID" `
+ --name "$WebAppName" `
+ --resource-group "$ResourceGroupName" `
+ --repo-url "$NewRepoUrl"
 ```
 
 Take your attention to the `--repo-url` argument. This is the trick.
