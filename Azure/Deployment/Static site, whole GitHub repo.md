@@ -70,7 +70,11 @@ To taste webapp deployment is is enough to create an `index.html` file in the re
 Now, we are ready to create our static site in the cloud.
 
 ```bash
-az webapp create --name "$WebAppName" --plan "$ServicePlanName" --resource-group "$ResourceGroupName" --deployment-source-url "$GhRepositoryUrl"
+az webapp create `
+ --name "$WebAppName" `
+ --plan "$ServicePlanName" `
+ --resource-group "$ResourceGroupName" `
+ --deployment-source-url "$GhRepositoryUrl"
 ```
 
 Remember to define variables (like `$ResourceGroupName`) or replace them with real values befor executing the command above.
